@@ -32,6 +32,7 @@ services:
       - /tmp:rw,noexec,nosuid
     environment:
       - reschedule=on-node-failure
+    command: mongod --auth
   zipkin:
     image: openzipkin/zipkin 
     hostname: zipkin
